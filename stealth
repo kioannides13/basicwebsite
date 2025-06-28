@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>katerina ioannides</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 60px 30px;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #111;
+      line-height: 1.6;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+    h1 {
+      text-transform: lowercase;
+      font-weight: normal;
+      font-size: 2.5rem;
+    }
+    h2 {
+      font-weight: normal;
+      font-size: 1.2rem;
+      margin: 20px 0 10px;
+    }
+    p {
+      font-size: 1rem;
+      margin-bottom: 40px;
+    }
+    a {
+      color: #111;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>katerina ioannides</h1>
+  <h2>tech. fundraising. political strategy.</h2>
+
+  <p>i'm a political strategist and fundraiser who’s helped raise over $1.5 billion for democratic campaigns, PACs, and national organizations. i work at the intersection of fundraising infrastructure and digital systems — from presidential campaigns to the tools that power the progressive movement.</p>
+
+  <p>📍 los angeles<br>
+  📧 <a href="mailto:katerinaioannides13@gmail.com">katerinaioannides13@gmail.com</a><br>
+  <a href="https://www.linkedin.com/in/katerina-ioannides-b9627676/" target="_blank">linkedin</a></p>
+</body>
+</html>
