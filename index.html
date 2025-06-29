@@ -91,21 +91,25 @@
   <p>built by hand — last updated: july 2025</p>
 </footer>
 
+
 <script>
+  // Email obfuscation
   document.getElementById('email-link').href = 'mailto:' + ['katerinaioannides13','gmail.com'].join('@');
 
-  const pathname = window.location.pathname;
-  if (pathname.includes('infra') || pathname.includes('resume')) {
+  // Password-protected sections
+  const hash = window.location.hash;
+  if (hash === '#infra' || hash === '#resume') {
     const pw = prompt("Enter password to view this page:");
-    if (pathname.includes('infra') && pw === '98gsdgjoids') {
+    if (hash === '#infra' && pw === '98gsdgjoids') {
       document.getElementById('infra-section').style.display = 'block';
-    } else if (pathname.includes('resume') && pw === '98gsdgjoids') {
+    } else if (hash === '#resume' && pw === '98gsdgjoids') {
       document.getElementById('resume-section').style.display = 'block';
     } else {
       document.body.innerHTML = '<h1 style="text-align:center; margin-top:100px;">unauthorized</h1>';
     }
   }
 
+  // Console easter egg
   console.log('%c🐈 meow?', 'font-size: 18px; color: #888; font-family: monospace;');
   console.log('let\'s build something: katerinaioannides13 [at] gmail');
 </script>
