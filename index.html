@@ -89,6 +89,16 @@
   📧 <a href="mailto:katerinaioannides13@gmail.com">katerinaioannides13@gmail.com</a><br>
   🔗 <a href="https://www.linkedin.com/in/katerina-ioannides-b9627676/" target="_blank">linkedin</a></p>
 
+  <div id="projects-section" style="display:none;">
+    <h2>projects</h2>
+    <p>[protected section — content coming soon]</p>
+  </div>
+
+  <div id="resume-section" style="display:none;">
+    <h2>resumé</h2>
+    <p>[protected section — content coming soon]</p>
+  </div>
+
   <footer>
     <p>built by hand — last updated: <span id="update-date"></span></p>
   </footer>
@@ -99,6 +109,18 @@
       month: 'long',
       day: 'numeric'
     });
+
+    const hash = window.location.hash;
+    if (hash === '#projects' || hash === '#resume' || hash === '#resumé') {
+      const pw = prompt("Enter password to view this page:");
+      if (hash === '#projects' && pw === '98gsdgjoids') {
+        document.getElementById('projects-section').style.display = 'block';
+      } else if ((hash === '#resume' || hash === '#resumé') && pw === '98gsdgjoids') {
+        document.getElementById('resume-section').style.display = 'block';
+      } else {
+        document.body.innerHTML = '<h1 style="text-align:center; margin-top:100px;">unauthorized</h1>';
+      }
+    }
 
     console.log('%c🐈 meow?', 'font-size: 18px; color: #888; font-family: monospace;');
     console.log('let\'s build something: katerinaioannides13 [at] gmail');
