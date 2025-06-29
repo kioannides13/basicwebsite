@@ -60,7 +60,7 @@
   <nav>
     <a href="#bio">bio</a> /
     <a href="#projects">projects</a> /
-    <a <a href="#resume">resume</a>
+    <a href="#resume">resume</a>
   </nav>
 
   <div class="bio" id="bio">
@@ -77,15 +77,12 @@
     <p>Kat lives in Los Angeles with her fiancée and enjoys teaching yoga, <a href="https://www.goodreads.com/user/show/56735501-katerina-ioannides" target="_blank">reading</a>, and <a href="https://www.strava.com/athletes/84096303" target="_blank">running</a> in her free time.</p>
   </div>
 
-  <div id="projects-section">
-    <h2>projects</h2>
-    <p>[protected section — content coming soon]</p>
-  </div>
-
-  <div id="resume-section">
-    <h2>resume</h2>
-    <p>[protected section — content coming soon]</p>
-  </div>
+  <div id="projects-section" style="display:none;">
+  ...
+</div>
+<div id="resume-section" style="display:none;">
+  ...
+</div>
 
   <footer>
   <p>built by hand — last updated: july 2025</p>
@@ -97,17 +94,28 @@
   document.getElementById('email-link').href = 'mailto:' + ['katerinaioannides13','gmail.com'].join('@');
 
   // Password-protected sections
+  function checkPasswordProtectedSection() {
+  // Always hide both sections on each check
+  document.getElementById('projects-section').style.display = 'none';
+  document.getElementById('resume-section').style.display = 'none';
+
   const hash = window.location.hash;
   if (hash === '#projects' || hash === '#resume') {
     const pw = prompt("Enter password to view this page:");
-    if (hash === '#projects' && pw === '98gsdgjoids') {
-      document.getElementById('projects-section').style.display = 'block';
-    } else if (hash === '#resume' && pw === '98gsdgjoids') {
-      document.getElementById('resume-section').style.display = 'block';
+    if (pw === '98gsdgjoids') {
+      if (hash === '#projects') {
+        document.getElementById('projects-section').style.display = 'block';
+      } else if (hash === '#resume') {
+        document.getElementById('resume-section').style.display = 'block';
+      }
     } else {
       document.body.innerHTML = '<h1 style="text-align:center; margin-top:100px;">unauthorized</h1>';
     }
   }
+}
+
+window.addEventListener('DOMContentLoaded', checkPasswordProtectedSection);
+window.addEventListener('hashchange', checkPasswordProtectedSection);
 
   // Console easter egg
   console.log('%c🐈 meow?', 'font-size: 18px; color: #888; font-family: monospace;');
