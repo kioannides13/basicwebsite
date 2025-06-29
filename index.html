@@ -77,11 +77,11 @@
     <p>Kat lives in Los Angeles with her fiancée and enjoys teaching yoga, <a href="https://www.goodreads.com/user/show/56735501-katerina-ioannides" target="_blank">reading</a>, and <a href="https://www.strava.com/athletes/84096303" target="_blank">running</a> in her free time.</p>
   </div>
 
-  <div id="projects-section" style="display:none;">
-  ...
+ <div id="projects" style="display:none;">
+...
 </div>
-<div id="resume-section" style="display:none;">
-  ...
+<div id="resume" style="display:none;">
+...
 </div>
 
   <footer>
@@ -96,8 +96,14 @@
   // Password-protected sections
   function checkPasswordProtectedSection() {
   // Always hide both sections on each check
-  document.getElementById('projects-section').style.display = 'none';
-  document.getElementById('resume-section').style.display = 'none';
+  document.getElementById('projects').style.display = 'none';
+document.getElementById('resume').style.display = 'none';
+...
+if (hash === '#projects') {
+  document.getElementById('projects').style.display = 'block';
+} else if (hash === '#resume') {
+  document.getElementById('resume').style.display = 'block';
+}
 
   const hash = window.location.hash;
   if (hash === '#projects' || hash === '#resume') {
