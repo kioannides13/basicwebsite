@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,13 +11,12 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐈‍⬛</text></svg>">
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-<!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VNNXHJY3CV"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-VNNXHJY3CV');
   </script>
   <meta name="description" content="Katerina Ioannides — political strategist & fundraiser working at the intersection of tech, digital infrastructure, and Democratic campaigns.">
@@ -25,29 +25,6 @@
   <meta name="twitter:title" content="Katerina Ioannides">
   <meta name="twitter:description" content="Political strategist and fundraiser with $300M+ raised across campaigns and digital infrastructure.">
   <link rel="canonical" href="https://katerinaioannides.com/">
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Katerina Ioannides",
-      "alternateName": "Kat Ioannides",
-      "url": "https://katerinaioannides.com",
-      "jobTitle": "Political Strategist and Fundraiser",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "NGP VAN"
-      },
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "Chapman University"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/in/katerina-ioannides-b9627676/",
-        "https://www.goodreads.com/user/show/56735501-katerina-ioannides",
-        "https://www.strava.com/athletes/84096303"
-      ]
-    }
-  </script>
 </head>
 <body>
   <h1>katerina ioannides</h1>
@@ -59,11 +36,12 @@
 
   <nav>
     <a href="#bio">bio</a> /
-    <a href="/infra">infra</a> /
-    <a href="/resume">resume</a>
+    <a href="#project">project</a> /
+    <a href="#resume">resume</a>
   </nav>
 
   <div class="bio" id="bio">
+    <!-- Bio content remains unchanged -->
     <p><strong>Katerina (Kat) Ioannides</strong> is a political strategist and fundraiser with a decade of experience at the intersection of politics and technology. She has helped raise over $300 million for Democratic campaigns and progressive causes, leveraging cutting-edge digital tools, data-driven strategy, and emerging tech solutions to optimize grassroots and major donor fundraising. Kat works at <a href="https://www.ngpvan.com/" target="_blank">the leading technology provider</a> for Democratic campaigns, progressive organizations, and mission-driven nonprofits, and serves as Finance Director for <a href="https://www.californiawomenslist.org/" target="_blank">California Women’s List</a>.</p>
 
     <p>Kat served as Deputy Director of Western US Finance for the Harris-Walz presidential campaign, where she helped execute 63 fundraisers across nine states in just 107 days, raising $143 million and contributing to a record-breaking $2 billion fundraising operation.</p>
@@ -77,8 +55,8 @@
     <p>Kat lives in Los Angeles with her fiancée and enjoys teaching yoga, <a href="https://www.goodreads.com/user/show/56735501-katerina-ioannides" target="_blank">reading</a>, and <a href="https://www.strava.com/athletes/84096303" target="_blank">running</a> in her free time.</p>
   </div>
 
-  <div id="infra-section">
-    <h2>infra</h2>
+  <div id="project-section">
+    <h2>project</h2>
     <p>[protected section — content coming soon]</p>
   </div>
 
@@ -88,30 +66,31 @@
   </div>
 
   <footer>
-  <p>built by hand — last updated: july 2025</p>
-</footer>
+    <p>built by hand — last updated: <span id="update-date"></span></p>
+  </footer>
 
+  <script>
+    document.getElementById('email-link').href = 'mailto:' + ['katerinaioannides13','gmail.com'].join('@');
 
-<script>
-  // Email obfuscation
-  document.getElementById('email-link').href = 'mailto:' + ['katerinaioannides13','gmail.com'].join('@');
-
-  // Password-protected sections
-  const hash = window.location.hash;
-  if (hash === '#infra' || hash === '#resume') {
-    const pw = prompt("Enter password to view this page:");
-    if (hash === '#infra' && pw === '98gsdgjoids') {
-      document.getElementById('infra-section').style.display = 'block';
-    } else if (hash === '#resume' && pw === '98gsdgjoids') {
-      document.getElementById('resume-section').style.display = 'block';
-    } else {
-      document.body.innerHTML = '<h1 style="text-align:center; margin-top:100px;">unauthorized</h1>';
+    const hash = window.location.hash;
+    if (hash === '#project' || hash === '#resume') {
+      const pw = prompt("Enter password to view this page:");
+      if (hash === '#project' && pw === '98gsdgjoids') {
+        document.getElementById('project-section').style.display = 'block';
+      } else if (hash === '#resume' && pw === '98gsdgjoids') {
+        document.getElementById('resume-section').style.display = 'block';
+      } else {
+        document.body.innerHTML = '<h1 style="text-align:center; margin-top:100px;">unauthorized</h1>';
+      }
     }
-  }
 
-  // Console easter egg
-  console.log('%c🐈 meow?', 'font-size: 18px; color: #888; font-family: monospace;');
-  console.log('let\'s build something: katerinaioannides13 [at] gmail');
-</script>
+    // Footer auto-update
+    document.getElementById('update-date').textContent = new Date().toLocaleDateString('en-US', {
+      year: 'numeric', month: 'long', day: 'numeric'
+    });
+
+    console.log('%c🐈 meow?', 'font-size: 18px; color: #888; font-family: monospace;');
+    console.log('let\'s build something: katerinaioannides13 [at] gmail');
+  </script>
 </body>
 </html>
