@@ -96,6 +96,11 @@
     const hash = window.location.hash;
     if (hash === '#projects' || hash === '#resume') {
       const pw = prompt("Enter password to view this page:");
+      if (pw === null) {
+        // User clicked Cancel, go back to home page
+        window.location.hash = '';
+        return;
+      }
       if (pw === '98gsdgjoids') {
         if (hash === '#projects') {
           document.getElementById('projects').style.display = 'block';
