@@ -54,7 +54,7 @@
   <h2>tech. fundraising. political strategy.</h2>
 
   <p>📍 los angeles<br>
-     📧 <a id="email-link" href="#">email kat</a><br>
+     📧 <a id="email-link" href="mailto:katerinaioannides13@gmail.com">email kat</a>
      🔗 <a href="https://www.linkedin.com/in/katerina-ioannides-b9627676/" target="_blank">linkedin</a></p>
 
   <nav>
@@ -87,13 +87,6 @@
 </footer>
 
 <script>
-  // Email obfuscation
-  // Only set href if the element exists!
-  const emailLink = document.getElementById('email-link');
-  if (emailLink) {
-    emailLink.href = 'mailto:' + ['katerinaioannides13','gmail.com'].join('@');
-  }
-
   // Password-protected sections
   function checkPasswordProtectedSection() {
     // Always hide both sections on each check
@@ -118,11 +111,10 @@
   // Run on load and when the hash changes
   window.addEventListener('DOMContentLoaded', checkPasswordProtectedSection);
   window.addEventListener('hashchange', checkPasswordProtectedSection);
-</script>
 
-  </html>
   // Console easter egg
-  console.log('%ccurious 🐈? aren't you', 'font-size: 18px; color: #888; font-family: monospace;');
-  console.log('let's talk: katerinaioannides13 [at] gmail');
+  console.log('%ccurious 🐈? aren\'t you', 'font-size: 18px; color: #888; font-family: monospace;');
+  console.log('let\'s talk: katerinaioannides13 [at] gmail');
+</script>
 </body>
 </html>
