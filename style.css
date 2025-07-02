@@ -1,138 +1,126 @@
-<style>
-  :root {
-    color-scheme: light dark;
-    --max-width: 720px;
-    --padding: 60px 32px;
-    --font-main: 'EB Garamond', Georgia, serif;
-    --bg-light: #ffffff;
-    --bg-dark: #111111;
-    --text-light: #111111;
-    --text-dark: #eeeeee;
-    --link-hover: 0.7;
-    --transition: 0.25s ease-in-out;
-  }
+Old style css for website 
 
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
+/* Base settings */
+:root {
+  color-scheme: light dark;
+}
 
-  html {
-    scroll-behavior: smooth;
-  }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
-  body {
-    margin: 0 auto;
-    padding: var(--padding);
-    font-family: var(--font-main);
-    background-color: var(--bg-light);
-    color: var(--text-light);
-    line-height: 1.75;
-    max-width: var(--max-width);
-    text-align: center;
-    transition: background-color var(--transition), color var(--transition);
-  }
+html {
+  scroll-behavior: smooth;
+}
 
-  body.dark-mode {
-    background-color: var(--bg-dark);
-    color: var(--text-dark);
-  }
+body {
+  margin: 0 auto;
+  padding: 60px 30px;
+  font-family: 'EB Garamond', Georgia, serif;
+  background-color: #fff;
+  color: #111;
+  line-height: 1.6;
+  max-width: 700px;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-  body.dark-mode a {
-    color: var(--text-dark);
-  }
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #111;
+  color: #eee;
+}
 
-  body.dark-mode a:hover {
-    color: #bbb;
-  }
+body.dark-mode a {
+  color: #ddd;
+}
 
-  a {
-    color: inherit;
-    text-decoration: none;
-    font-size: 1rem;
-    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><text y='1em' font-size='28'>🐈‍⬛</text></svg>") 16 16, pointer;
-    transition: opacity var(--transition);
-  }
+body.dark-mode a:hover {
+  color: #bbb;
+}
 
-  a:hover {
-    opacity: var(--link-hover);
-  }
+/* Cursor on links - black cat emoji */
+a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><text y='1em' font-size='28'>🐈‍⬛</text></svg>") 16 16, pointer;
+}
 
-  a:focus {
-    outline: 2px solid #888;
-    outline-offset: 2px;
-  }
+a:hover {
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
+}
 
-  h1 {
-    text-transform: lowercase;
-    font-weight: 400;
-    font-size: clamp(2rem, 5vw, 2.75rem);
-    margin-bottom: 0.25rem;
-    letter-spacing: -0.5px;
-  }
+a:focus {
+  outline: 2px solid #888;
+  outline-offset: 2px;
+}
 
-  h2 {
-    font-weight: 400;
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
-    margin-bottom: 2rem;
-    color: #666;
-  }
+/* Headings */
+h1 {
+  text-transform: lowercase;
+  font-weight: normal;
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  margin-bottom: 0.5rem;
+}
 
-  p {
-    font-size: 1rem;
-    margin-bottom: 1.25rem;
-  }
+h2 {
+  font-weight: normal;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  margin: 0 0 30px;
+}
 
-  nav {
-    margin: 2rem 0;
-  }
+/* Text blocks */
+p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
 
-  nav a {
-    margin: 0 12px;
-    font-weight: 600;
-    text-transform: lowercase;
-    letter-spacing: 0.3px;
-    transition: opacity var(--transition);
-  }
+nav {
+  margin: 30px 0;
+}
 
-  nav a:hover {
-    opacity: var(--link-hover);
-  }
+nav a {
+  margin: 0 10px;
+  font-weight: bold;
+  text-transform: lowercase;
+}
 
-  .bio {
-    text-align: left;
-  }
+.bio {
+  text-align: left;
+}
 
-  .bio p {
-    margin-bottom: 1.5rem;
-  }
+.bio p {
+  margin-bottom: 1.2rem;
+}
 
-  footer {
-    font-size: 0.8rem;
-    color: #888;
-    margin-top: 4rem;
-    text-align: center;
-    padding: 2rem 0;
-  }
+footer {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 60px;
+  text-align: center;
+  padding: 20px 0;
+}
 
-  #projects, #resume {
-    display: none;
-    margin-top: 2.5rem;
-    text-align: left;
-  }
+#projects, #resume {
+  display: none;
+  margin-top: 40px;
+  text-align: left;
+}
 
-  #toggle-theme {
-    border: none;
-    background: transparent;
-    color: inherit;
-    cursor: pointer;
-    font-family: inherit;
-    font-size: 0.9rem;
-    opacity: 0.6;
-    margin-bottom: 2rem;
-    transition: opacity var(--transition);
-  }
+/* Dark mode toggle button */
+#toggle-theme {
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
 
-  #toggle-theme:hover {
-    opacity: 1;
-  }
-</style>
+#toggle-theme:hover {
+  opacity: 1;
+}
