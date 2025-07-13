@@ -57,7 +57,7 @@
 
   <nav>
     <a href="#bio">bio</a> /
-    <a href="#projects">projects</a> /
+    <a href="projects.html">projects</a> /
     <a href="#resume">resume</a>
   </nav>
 
@@ -67,20 +67,6 @@
     <p>Earlier in her career, Kat managed a historic assembly race that flipped a Republican district by five points and outraised an incumbent 4:1. She later served as Organizing Director for Elizabeth Warren’s presidential campaign in Los Angeles and Orange County. She's also consulted for state caucuses and national organizations, including Flip The West, the Wisconsin Assembly Democrats, and the Utah House Democrats, and previously worked in both chambers of the California Legislature. Before transitioning into politics, she worked in early-stage tech start-ups.</p>
     <p>Kat lives in Los Angeles with her fiancée and enjoys teaching yoga, <a href="https://www.goodreads.com/user/show/56735501-katerina-ioannides" target="_blank">reading</a>, and <a href="https://www.strava.com/athletes/84096303" target="_blank">running</a> in her free time.</p>
   </section>
-
-  <div id="projects" style="display:none;">
-    <section style="padding: 1rem;">
-      <h3>NextDonor (Private Beta)</h3>
-      <p><em>A smarter way for campaigns and fundraisers to surface high-potential donors from public data.</em></p>
-      <p>I built NextDonor because I was tired of clunky databases and manual exporting. Now I can pull clean, actionable donor stats in seconds. No clutter. No noise. Just insights that drive real fundraising decisions.</p>
-      <ul>
-        <li><strong>Status:</strong> Private Beta (local build)</li>
-        <li><strong>Role:</strong> Founder / Engineer / Strategist</li>
-        <li><strong>Stack:</strong> React, Express, real-time public campaign finance data</li>
-      </ul>
-      <p><strong>Interested in early access or testing?</strong> Reach out directly or <a href="#">join the waitlist</a>.</p>
-    </section>
-  </div>
 
   <div id="resume" style="display:none;">
     <p style="padding: 1rem;">coming soon</p>
@@ -92,22 +78,17 @@
 
   <script>
     function checkPasswordProtectedSection() {
-      document.getElementById('projects').style.display = 'none';
       document.getElementById('resume').style.display = 'none';
 
       const hash = window.location.hash;
-      if (hash === '#projects' || hash === '#resume') {
+      if (hash === '#resume') {
         const pw = prompt("Enter password to view this page:");
         if (pw === null) {
           window.location.hash = '';
           return;
         }
         if (pw === '98gsdgjoids') {
-          if (hash === '#projects') {
-            document.getElementById('projects').style.display = 'block';
-          } else if (hash === '#resume') {
-            document.getElementById('resume').style.display = 'block';
-          }
+          document.getElementById('resume').style.display = 'block';
         } else {
           document.body.innerHTML = '<h1 style="text-align:center; margin-top:100px; font-size:18px;">ping kat</h1>';
         }
