@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Katerina Ioannides</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🐈‍⬛</text></svg>">
+</head>
+<body>
+  <main id="content" style="display:none; max-width: 700px; margin: auto; padding: 2rem;">
+    <h1>Projects</h1>
+
+    <section style="padding-top: 1rem;">
+      <h3>NextDonor <em>(Private Beta)</em></h3>
+      <p><em>A smarter way for campaigns and fundraisers to surface high-potential donors from public data.</em></p>
+      <p>I built <strong>NextDonor</strong> because I was tired of clunky databases and manual exporting. Now I can pull clean, actionable donor stats in seconds. No clutter. No noise. Just insights that drive real fundraising decisions.</p>
+      <ul>
+        <li><strong>Status:</strong> Private Beta (local build)</li>
+        <li><strong>Role:</strong> Founder / Engineer / Strategist</li>
+        <li><strong>Stack:</strong> React, Express, real-time public campaign finance data</li>
+      </ul>
+      <p><strong>Interested in early access or testing?</strong> Reach out directly or <a href="mailto:katerinaioannides13@gmail.com">join the waitlist</a>.</p>
+    </section>
+
+    <footer style="margin-top: 3rem;">
+      <a href="index.html">← back to home</a>
+    </footer>
+  </main>
+
+  <script>
+    const password = prompt("Enter password to view this page:");
+    if (password === "98gsdgjoids") {
+      document.getElementById("content").style.display = "block";
+    } else {
+      document.body.innerHTML = '<h1 style="text-align:center; margin-top:100px; font-size:18px;">ping kat</h1>';
+    }
+  </script>
+</body>
+</html>
