@@ -1,33 +1,168 @@
-<main id="content" style="display:none; max-width: 1080px; margin: 4rem auto; padding: 2rem 3rem; font-size: 1.1rem; line-height: 1.75; text-align: left;">
-  <h1 style="font-size: 2.25rem; margin-bottom: 2rem;">Projects</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Katerina Ioannides</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🐈‍⬛</text></svg>'">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
 
-  <p style="margin-bottom: 2.5rem; color: #444;">
-    A sample of projects and prototypes I’m currently working on outside of my full-time role.
-  </p>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
 
-  <section style="margin-bottom: 3rem;">
-    <h3 style="font-size: 1.5rem; border-bottom: 1px solid #ddd; padding-bottom: 0.5rem;">California Women’s List</h3>
-    <p>As Finance Director for <a href="https://www.californiawomenslist.org/" target="_blank">California Women’s List</a>, I help lead statewide efforts to support pro-choice women running for office in California. My focus is on scaling sustainable fundraising infrastructure, expanding institutional partnerships, and shaping our 10-year strategic growth vision. I work closely with donors, sponsors, and stakeholders to power early support for candidates positioned to lead.</p>
-  </section>
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
 
-  <section style="margin-bottom: 3rem;">
-    <h3 style="font-size: 1.5rem; border-bottom: 1px solid #ddd; padding-bottom: 0.5rem;">NextDonor <em>(Personal Prototype)</em></h3>
-    <p>I built <strong>NextDonor</strong> as a self-initiated experiment to learn more about streamlining political donor targeting workflows from public databases. Most tools I’ve encountered as a fundraiser either lack flexibility or are burdened with unnecessary complexity, so I designed a lean prototype to explore how cleaner, more actionable data could be surfaced quickly from public databases.</p>
-    <p><strong>Status:</strong> Personal prototype (non-commercial)<br>
-    <strong>Role:</strong> Designer / Developer (built for learning)<br>
-    <strong>Stack:</strong> React, Node.js, Express, PostgreSQL<br>
-    <strong>Curious?</strong> Always open to feedback — <a href="mailto:katerinaioannides13@gmail.com">reach out</a>.</p>
-  </section>
+    body {
+      margin: 0 auto;
+      padding: 60px 30px;
+      font-family: 'EB Garamond', Georgia, serif;
+      background-color: #fff;
+      color: #111;
+      line-height: 1.75;
+      max-width: 960px;
+      text-align: left;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
 
-  <section style="margin-bottom: 3rem;">
-    <h3 style="font-size: 1.5rem; border-bottom: 1px solid #ddd; padding-bottom: 0.5rem;">How I Recharge</h3>
-    <p><strong>The Book Stack:</strong> I read <strong>52–100 books a year</strong> and share my highlights. What started as a personal system for retaining more of what I read has become a core part of my thinking. I’ll read anything—send recs! <br>
-    📚 <a href="https://www.goodreads.com/user/show/56735501-katerina-ioannides" target="_blank">Follow me on Goodreads</a></p>
-    <p><strong>Running & Movement:</strong> Running is my favorite way to stay grounded. I’m deeply involved in LA’s fitness community—whether training, trail relays, or yoga. I’ve helped coordinate partnerships with <strong>AHA Sparkling Water</strong>, <strong>LMNT</strong>, and <strong>CBS Radford</strong> to support fitness creators across LA. <br>
-    🏃‍♀️ <a href="https://www.strava.com/athletes/84096303" target="_blank">Follow me on Strava</a></p>
-  </section>
+    body.dark-mode {
+      background-color: #111;
+      color: #eee;
+    }
 
-  <footer style="text-align: center; margin-top: 4rem;">
-    <a href="index.html">← Back to home</a>
-  </footer>
-</main>
+    body.dark-mode a {
+      color: #ddd;
+    }
+
+    body.dark-mode a:hover {
+      color: #bbb;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      font-size: 1rem;
+      cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><text y='1em' font-size='28'>🐈‍⬛</text></svg>") 16 16, pointer;
+      transition: opacity 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
+      border-bottom: 1px dotted transparent;
+    }
+
+    a:hover {
+      opacity: 0.7;
+      border-bottom-color: #888;
+    }
+
+    a:focus {
+      outline: 2px solid #888;
+      outline-offset: 3px;
+    }
+
+    h1, h2, h3 {
+      font-weight: normal;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      text-transform: lowercase;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 2.75rem);
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.25rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.05rem;
+      margin-bottom: 1.5rem;
+      color: #333;
+      max-width: 75ch;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 4rem;
+      color: #888;
+    }
+
+    #locked-message {
+      text-align: center;
+      margin-top: 3rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <p id="locked-message">ping kat for access, or guess.. 🗝️</p>
+
+  <main id="content" style="display: none;">
+    <h1>Projects</h1>
+
+    <p>
+      A sample of projects and prototypes I’m currently working on outside of my full-time role.
+    </p>
+
+    <section>
+      <h3>California Women’s List</h3>
+      <p>As Finance Director for <a href="https://www.californiawomenslist.org/" target="_blank">California Women’s List</a>, I help lead statewide efforts to support pro-choice women running for office in California. My focus is on scaling sustainable fundraising infrastructure, expanding institutional partnerships, and shaping our 10-year strategic growth vision. I work closely with donors, sponsors, and stakeholders to power early support for candidates positioned to lead.</p>
+    </section>
+
+    <section>
+      <h3>NextDonor <em>(Personal Prototype)</em></h3>
+      <p>I built <strong>NextDonor</strong> as a self-initiated experiment to learn more about streamlining political donor targeting workflows from public databases. Most tools I’ve encountered as a fundraiser either lack flexibility or are burdened with unnecessary complexity, so I designed a lean prototype to explore how cleaner, more actionable data could be surfaced quickly from public databases.</p>
+      <p><strong>Status:</strong> Personal prototype (non-commercial)<br>
+      <strong>Role:</strong> Designer / Developer (built for learning)<br>
+      <strong>Stack:</strong> React, Node.js, Express, PostgreSQL<br>
+      <strong>Curious?</strong> Always open to feedback — <a href="mailto:katerinaioannides13@gmail.com">reach out</a>.</p>
+    </section>
+
+    <section>
+      <h3>How I Recharge</h3>
+      <p><strong>The Book Stack:</strong> I read <strong>52–100 books a year</strong> and share my highlights. What started as a personal system for retaining more of what I read has become a core part of my thinking. I’ll read anything—send recs! <br>
+      📚 <a href="https://www.goodreads.com/user/show/56735501-katerina-ioannides" target="_blank">Follow me on Goodreads</a></p>
+      <p><strong>Running & Movement:</strong> Running is my favorite way to stay grounded. I’m deeply involved in LA’s fitness community—whether training, trail relays, or yoga. I’ve helped coordinate partnerships with <strong>AHA Sparkling Water</strong>, <strong>LMNT</strong>, and <strong>CBS Radford</strong> to support fitness creators across LA. <br>
+      🏃‍♀️ <a href="https://www.strava.com/athletes/84096303" target="_blank">Follow me on Strava</a></p>
+    </section>
+
+    <footer>
+      <a href="index.html">← Back to home</a>
+    </footer>
+  </main>
+
+  <script>
+    const unlockCode = ['k', 'a', 't'];
+    let inputSequence = [];
+
+    document.addEventListener('keydown', function (event) {
+      inputSequence.push(event.key.toLowerCase());
+      if (inputSequence.length > unlockCode.length) {
+        inputSequence.shift();
+      }
+
+      if (JSON.stringify(inputSequence) === JSON.stringify(unlockCode)) {
+        document.getElementById("content").style.display = "block";
+        document.getElementById("locked-message").style.display = "none";
+
+        const notice = document.createElement('p');
+        notice.textContent = '🔓 Access granted';
+        notice.style.textAlign = 'center';
+        notice.style.marginTop = '2rem';
+        notice.style.color = '#444';
+        document.body.insertBefore(notice, document.body.firstChild);
+      }
+    });
+  </script>
+</body>
+</html>
