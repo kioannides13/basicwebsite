@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects — Katerina Ioannides</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🐈‍⬛</text></svg>'">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>K</text></svg>'">
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -49,7 +49,6 @@
       color: inherit;
       text-decoration: none;
       font-size: 1rem;
-      cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><text y='1em' font-size='28'>🐈‍⬛</text></svg>") 16 16, pointer;
       transition: opacity 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
       border-bottom: 1px dotted transparent;
     }
@@ -105,7 +104,7 @@
   </style>
 </head>
 <body>
-  <p id="locked-message">ping kat for access, or guess.. 🗝️</p>
+  <p id="locked-message">Restricted content. Enter unlock sequence to view.</p>
 
   <main id="content" style="display: none;">
     <h1>Projects</h1>
@@ -125,15 +124,13 @@
       <p><strong>Status:</strong> Personal prototype (non-commercial)<br>
       <strong>Role:</strong> Designer / Developer (built for learning)<br>
       <strong>Stack:</strong> React, Node.js, Express, PostgreSQL<br>
-      <strong>Curious?</strong> Always open to feedback — <a href="mailto:katerinaioannides13@gmail.com">reach out</a>.</p>
+      <strong>Contact:</strong> <a href="mailto:katerinaioannides13@gmail.com">Reach out</a>.</p>
     </section>
 
     <section>
       <h3>How I Recharge</h3>
-      <p><strong>The Book Stack:</strong> I read <strong>52–100 books a year</strong> and share my highlights. What started as a personal system for retaining more of what I read has become a core part of my thinking. I’ll read anything—send recs! <br>
-      📚 <a href="https://www.goodreads.com/user/show/56735501-katerina-ioannides" target="_blank">Follow me on Goodreads</a></p>
-      <p><strong>Running & Movement:</strong> Running is my favorite way to stay grounded. I’m deeply involved in LA’s fitness community—whether training, trail relays, or yoga. I’ve helped coordinate partnerships with <strong>AHA Sparkling Water</strong>, <strong>LMNT</strong>, and <strong>CBS Radford</strong> to support fitness creators across LA. <br>
-      🏃‍♀️ <a href="https://www.strava.com/athletes/84096303" target="_blank">Follow me on Strava</a></p>
+      <p><strong>The Book Stack:</strong> I read 52–100 books a year and share my highlights. What started as a personal system for retaining more of what I read has become a core part of my thinking. <a href="https://www.goodreads.com/user/show/56735501-katerina-ioannides" target="_blank">Follow on Goodreads</a></p>
+      <p><strong>Running & Movement:</strong> Running is my favorite way to stay grounded. I’m deeply involved in LA’s fitness community—whether training, trail relays, or yoga. I’ve helped coordinate partnerships with AHA Sparkling Water, LMNT, and CBS Radford to support fitness creators across LA. <a href="https://www.strava.com/athletes/84096303" target="_blank">Follow on Strava</a></p>
     </section>
 
     <footer>
@@ -154,13 +151,6 @@
       if (JSON.stringify(inputSequence) === JSON.stringify(unlockCode)) {
         document.getElementById("content").style.display = "block";
         document.getElementById("locked-message").style.display = "none";
-
-        const notice = document.createElement('p');
-        notice.textContent = '🔓 Access granted';
-        notice.style.textAlign = 'center';
-        notice.style.marginTop = '2rem';
-        notice.style.color = '#444';
-        document.body.insertBefore(notice, document.body.firstChild);
       }
     });
   </script>
