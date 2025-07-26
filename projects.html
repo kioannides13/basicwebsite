@@ -104,20 +104,20 @@
       text-align: center;
       margin-top: 3rem;
       color: #777;
+      font-size: 1rem;
     }
 
-    #locked-message + a {
-      display: block;
+    #locked-footer {
       text-align: center;
       font-size: 0.9rem;
+      margin-top: 2rem;
       color: #888;
-      margin-top: 1rem;
     }
   </style>
 </head>
 <body>
   <p id="locked-message">ping kat for access, or guess.. 🗝️</p>
-  <a href="index.html">← Back to home</a>
+  <div id="locked-footer"><a href="index.html">← Back to home</a></div>
 
   <main id="content" style="display: none;">
     <h1>Projects</h1>
@@ -166,7 +166,7 @@
       if (JSON.stringify(inputSequence) === JSON.stringify(unlockCode)) {
         document.getElementById("content").style.display = "block";
         document.getElementById("locked-message").style.display = "none";
-        document.querySelector("a[href='index.html']").style.display = "none";
+        document.getElementById("locked-footer").style.display = "none";
       }
     });
   </script>
