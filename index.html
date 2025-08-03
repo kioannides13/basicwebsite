@@ -85,7 +85,7 @@
     }
 
     #locked-message {
-      display: flex;
+      display: none;
       align-items: center;
       justify-content: center;
       height: 60vh;
@@ -96,6 +96,7 @@
     }
 
     #locked-footer {
+      display: none;
       text-align: center;
       font-size: 0.9rem;
       color: #888;
@@ -153,18 +154,34 @@
     const unlockCode = ['k', 'a', 't'];
     let inputSequence = [];
 
-    document.addEventListener('keydown', function (event) {
-      inputSequence.push(event.key.toLowerCase());
-      if (inputSequence.length > unlockCode.length) inputSequence.shift();
+    function handleUnlock() {
+      const content = document.getElementById("resume-content");
+      const message = document.getElementById("locked-message");
+      const footer = document.getElementById("locked-footer");
 
-      if (JSON.stringify(inputSequence) === JSON.stringify(unlockCode)) {
-        const content = document.getElementById("resume-content");
-        content.style.display = "block";
-        content.classList.add("visible");
-        document.getElementById("locked-message").style.display = "none";
-        document.getElementById("locked-footer").style.display = "none";
+      content.style.display = "block";
+      content.classList.add("visible");
+      message.style.display = "none";
+      footer.style.display = "none";
+    }
+
+    function initResumeLock() {
+      if (window.location.hash === "#resume") {
+        document.getElementById("locked-message").style.display = "flex";
+        document.getElementById("locked-footer").style.display = "block";
+
+        document.addEventListener('keydown', function (event) {
+          inputSequence.push(event.key.toLowerCase());
+          if (inputSequence.length > unlockCode.length) inputSequence.shift();
+
+          if (JSON.stringify(inputSequence) === JSON.stringify(unlockCode)) {
+            handleUnlock();
+          }
+        });
       }
-    });
+    }
+
+    window.addEventListener("DOMContentLoaded", initResumeLock);
   </script>
 </body>
 </html>
