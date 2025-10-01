@@ -2,151 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects — Katerina Ioannides</title>
+
+  <!-- Favicon + Fonts -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🐈‍⬛</text></svg>">
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      color-scheme: light dark;
-    }
 
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'EB Garamond', Georgia, serif;
-      background-color: #fafafa;
-      color: #222;
-      line-height: 1.7;
-    }
-
-    body.dark-mode {
-      background-color: #121212;
-      color: #eee;
-    }
-
-    a {
-      color: #0057b8;
-      text-decoration: none;
-      border-bottom: 1px dotted transparent;
-      transition: border-color 0.2s ease;
-    }
-
-    a:hover {
-      border-bottom-color: #0057b8;
-    }
-
-    body.dark-mode a {
-      color: #76b2f7;
-    }
-
-    main {
-      max-width: 840px;
-      margin: 0 auto;
-      padding: 4rem 2rem;
-      text-align: left;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1.25rem;
-      text-transform: lowercase;
-    }
-
-    h2 {
-      font-weight: normal;
-      font-size: 1.25rem;
-      margin-top: 0;
-      margin-bottom: 2rem;
-      color: #444;
-    }
-
-    nav {
-      margin: 2rem 0;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid #ddd;
-      text-transform: uppercase;
-      font-size: 0.9rem;
-      letter-spacing: 0.5px;
-    }
-
-    nav a {
-      margin-right: 16px;
-    }
-
-    section {
-      margin-bottom: 2rem;
-    }
-
-    h3 {
-      font-size: 1.5rem;
-      margin-top: 3rem;
-      margin-bottom: 0.5rem;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 0.3rem;
-    }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      max-width: 65ch;
-      margin-bottom: 1.5rem;
-    }
-
-    .project-meta {
-      background: #f2f2f2;
-      padding: 1rem 1.25rem;
-      border-left: 3px solid #ccc;
-      font-size: 0.95rem;
-      line-height: 1.6;
-      max-width: 680px;
-      margin-top: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    body.dark-mode .project-meta {
-      background: #1e1e1e;
-      border-left-color: #444;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 4rem;
-      font-size: 0.9rem;
-      color: #888;
-    }
-  </style>
+  <!-- Shared Stylesheet (same as index.html) -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main id="content" class="visible">
+  <main class="container">
     <h1>katerina ioannides</h1>
     <h2>tech. fundraising. political strategy.</h2>
 
-    <p><a href="mailto:kat@katerinaioannides.com">📧 email kat</a></p>
+    <p><a id="email-link" href="mailto:kat@katerinaioannides.com">📧 email kat</a></p>
 
-    <nav>
-      <a href="index.html#bio">bio</a>
-      <a href="projects.html">projects</a>
-      <a href="index.html#resume">resume</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html#bio" data-route="bio">bio</a>
+      <a href="projects.html" data-route="projects">projects</a>
+      <a href="index.html#resume" data-route="resume">resume</a>
     </nav>
 
     <section>
-      <p>A selection of projects and prototypes I’m currently working on outside of my full-time role. If anything sparks interest, please email kat@katerinaioannides.com.</p>
+      <p>A selection of projects and prototypes I’m currently working on outside of my full-time role. If anything sparks interest, please email <a href="mailto:kat@katerinaioannides.com">kat@katerinaioannides.com</a>.</p>
     </section>
 
     <section>
       <h3><a href="https://www.californiawomenslist.org/" target="_blank" rel="noopener noreferrer">California Women’s List</a></h3>
       <p>
         As Finance Director, I help lead statewide efforts to support pro-choice women running for office in California. Since stepping into the role, I've increased donations by 66% while reducing operating costs.
-        I work closely with donors, sponsors, and stakeholders to support women running for state & local office in California.
+        I work closely with donors, sponsors, and stakeholders to support women running for state &amp; local office in California.
         You can reach me at <a href="mailto:katerina@cawomenslist.org">katerina@cawomenslist.org</a>.
       </p>
     </section>
@@ -159,13 +46,13 @@
         <em>(Non-Commercial Personal Project)</em>
       </h3>
       <p>
-        <strong>PoliticalDonorIQ</strong> is a personal side project created for non-commercial  experimentation to make federal campaign finance data more accessible,
-        with optional AI-assisted profiling to generate clean, structured insights.
+        <strong>PoliticalDonorIQ</strong> is a personal side project created for non-commercial learning and experimentation.
+        It explores ways to make federal campaign finance data more actionable for public-interest use cases by integrating raw FEC data with deduplication, enrichment, and maximum-out detection with optional AI-assisted profiling to generate clean, structured insights.
       </p>
       <p class="project-meta">
-        <strong>Status:</strong> Invite-only beta (friends & family testing)<br>
+        <strong>Status:</strong> Invite-only beta (friends &amp; family testing)<br>
         <strong>Role:</strong> Designer / Developer / Product Architect<br>
-        <strong>Stack:</strong> React, Deno, FEC API, etc. <br>
+        <strong>Stack:</strong> React, Deno, FEC API, etc.<br>
         <strong>Site:</strong> <a href="https://app.politicaldonoriq.com" target="_blank" rel="noopener noreferrer">politicaldonoriq.com</a><br>
         <strong>Contact:</strong> <a href="mailto:info@politicaldonoriq.com">info@politicaldonoriq.com</a>
       </p>
@@ -174,18 +61,33 @@
     <section>
       <h3>How I Recharge</h3>
       <p>
-        <strong><a href="https://www.goodreads.com/user/show/56735501-katerina-ioannides" target="_blank" rel="noopener noreferrer">Reading:</a></strong>
-        I read 52–100 books a year across genres and share highlights. I will literally read anything - send recs.
+        <strong><a href="https://www.goodreads.com/user/show/56735501-katerina-ioannides" target="_blank" rel="noopener noreferrer">The Book Stack:</a></strong>
+        I read 52–100 books a year across genres and share highlights. I’ll read anything — send recs.
       </p>
       <p>
-        <strong><a href="https://www.strava.com/athletes/84096303" target="_blank" rel="noopener noreferrer">Running & Movement:</a></strong>
+        <strong><a href="https://www.strava.com/athletes/84096303" target="_blank" rel="noopener noreferrer">Running &amp; Movement:</a></strong>
         Running keeps me grounded — it’s where I find connection, clarity, and stay connected to my neighbors. I’ve worked with brands like AHA Sparkling Water, LMNT, and CBS Radford to support local run clubs and creators across LA.
       </p>
     </section>
 
-    <footer>
+    <footer class="site-foot">
       site by kat.
     </footer>
   </main>
+
+  <!-- Shared nav active-state helper (same snippet as index) -->
+  <script>
+    (function setActiveNav(){
+      const path = (location.hash || '').replace('#','') || (location.pathname.split('/').pop() || 'projects.html');
+      document.querySelectorAll('nav.site-nav a').forEach(a=>{
+        const route = a.dataset.route;
+        const isActive =
+          (route === 'projects' && location.pathname.endsWith('projects.html')) ||
+          (route === 'bio' && path === 'bio') ||
+          (route === 'resume' && path === 'resume');
+        if (isActive) a.classList.add('is-active');
+      });
+    })();
+  </script>
 </body>
 </html>
