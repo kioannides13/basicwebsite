@@ -1,82 +1,90 @@
-/* Base layout */
-body {
-  margin: 0;
-  font-family: 'EB Garamond', Georgia, serif;
-  background: #fff;
-  color: #111;
-  line-height: 1.7;
-}
 
-main {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 60px 30px;
-  text-align: left;
-}
 
 /* Typography */
 h1 {
-  text-transform: lowercase;
-  font-weight: normal;
-  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-size: clamp(2.3rem, 5vw, 2.8rem);
+  font-weight: 500;
   margin-bottom: 0.5rem;
+  letter-spacing: -0.3px; /* subtle refinement */
 }
 
 h2 {
-  font-weight: normal;
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
-  margin: 0 0 30px;
-  color: #444;
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  font-weight: 400;
+  margin: 0 0 2.5rem;
+  color: #555;
+}
+
+h3 {
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin: 3rem 0 1rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid #eee;
+}
+
+/* Body & spacing */
+body {
+  background: #fff;
+  color: #111;
+  font-family: 'EB Garamond', Georgia, serif;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+main.container {
+  max-width: 760px; /* slightly wider for balance */
+  margin: 0 auto;
+  padding: 70px 32px;
+}
+
+section {
+  margin-bottom: 2.5rem;
 }
 
 p {
-  font-size: 1.05rem;
   margin-bottom: 1.5rem;
   max-width: 65ch;
-}
-
-/* Navigation */
-nav {
-  margin: 2rem 0;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #ddd;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
-}
-
-nav a {
-  margin-right: 16px;
 }
 
 /* Links */
 a {
   color: #0057b8;
   text-decoration: none;
-  border-bottom: 1px dotted transparent;
-  transition: border-color 0.2s ease;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s ease, color 0.25s ease;
 }
 
 a:hover {
   border-bottom-color: currentColor;
+  color: #004a9f; /* subtle darker hover */
 }
 
-/* Bio section */
-.bio p {
-  margin-bottom: 1.5rem;
+/* Nav */
+nav.site-nav {
+  margin: 2.5rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e5e5e5;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.6px;
+}
+
+nav.site-nav a {
+  margin-right: 18px;
+  font-weight: 400;
+}
+
+nav.site-nav a.is-active {
+  border-bottom-color: currentColor;
 }
 
 /* Footer */
-footer {
+footer.site-foot {
   text-align: center;
   font-size: 0.9rem;
-  color: #888;
-  margin-top: 4rem;
-  padding: 20px 0;
-}
-
-/* Resume section (hidden by default) */
-#resume {
-  display: none;
-  padding: 1rem;
+  color: #777;
+  margin-top: 5rem;
+  padding: 25px 0;
+  border-top: 1px solid #f0f0f0;
 }
