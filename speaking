@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Katerina Ioannides — Speaking</title>
+
+  <meta name="theme-color" content="#ffffff" />
+  <meta property="og:title" content="katerina ioannides — speaking" />
+  <meta property="og:type" content="website" />
+  <meta name="author" content="Katerina Ioannides">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Speaking — Katerina Ioannides. Talks, panels, and trainings on fundraising, campaign tech, and political strategy.">
+  <meta property="og:description" content="Talks, panels, and trainings on fundraising, campaign tech, and political strategy.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Katerina Ioannides — Speaking">
+  <meta name="twitter:description" content="Talks, panels, and trainings on fundraising, campaign tech, and political strategy.">
+  <link rel="canonical" href="https://katerinaioannides.com/speaking.html">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐈‍⬛</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', Georgia, serif;
+      background: #fff;
+      color: #111;
+      line-height: 1.7;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 30px;
+      text-align: left;
+    }
+
+    h1 {
+      text-transform: lowercase;
+      font-weight: normal;
+      font-size: clamp(2rem, 5vw, 2.5rem);
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-weight: normal;
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      margin: 0 0 30px;
+      color: #444;
+    }
+
+    nav {
+      margin: 2rem 0;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+
+    nav a {
+      margin-right: 16px;
+    }
+
+    a {
+      color: #0057b8;
+      text-decoration: none;
+      border-bottom: 1px dotted transparent;
+      transition: border-color 0.2s ease;
+    }
+
+    a:hover {
+      border-bottom-color: currentColor;
+    }
+
+    .section p {
+      margin-bottom: 1.25rem;
+    }
+
+    .list {
+      margin: 0 0 2rem;
+    }
+
+    .list .item {
+      margin: 0.35rem 0;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+      margin-top: 4rem;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>speaking</h1>
+    <h2>talks, panels, trainings.</h2>
+
+    <p><a href="mailto:kat@katerinaioannides.com">📧 booking / inquiries</a></p>
+
+    <nav>
+      <a href="index.html">home</a>
+      <a href="projects.html">projects</a>
+      <a href="speaking.html">speaking</a>
+      <a href="index.html#resume">resume</a>
+    </nav>
+
+    <section class="section" aria-label="Speaking overview">
+      <p>
+        Kat speaks on political fundraising, campaign tech, and modern strategy — with an emphasis on practical systems
+        that scale.
+      </p>
+    </section>
+
+    <section class="section" aria-label="Upcoming speaking engagements">
+      <h2>Upcoming</h2>
+
+      <div class="list">
+        <div class="item">
+          USC Center for the Political Future — <em>“Let’s Get It Wonky in Here”</em><br>
+          A discussion on the mechanics of campaigns—money, data, ads, and polls, moderated by the <em>Los Angeles Times</em>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Selected speaking engagements">
+      <h2>Selected</h2>
+
+      <div class="list">
+        <div class="item">California Democratic Party Convention — Campaign Bootcamp, Finance Training</div>
+        <div class="item">Emily’s List — Finance Training for State & Local Candidates</div>
+        <div class="item">Democratic Legislative Campaign Committee (DLCC) — Finance Training</div>
+        <div class="item">Democratic National Committee — National Technology & Data Briefing</div>
+        <div class="item">Fullerton College Annual Women’s Forum — Keynote</div>
+      </div>
+
+      <p>
+        For keynotes, panels, trainings, or moderated conversations: <a href="mailto:kat@katerinaioannides.com">kat@katerinaioannides.com</a>.
+      </p>
+    </section>
+
+    <footer>
+      site by kat.
+    </footer>
+  </main>
+</body>
+</html>
