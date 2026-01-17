@@ -45,6 +45,8 @@
         As Finance Director, I lead statewide fundraising efforts to elect women running for office in California.
         Since stepping into the role, I’ve driven a more than 62% increase in contributions while reducing operating costs,
         ensuring more resources go directly to candidates.
+        I collaborate closely with donors, sponsors, and key stakeholders to build sustainable support for women at the
+        state and local level.
         You can reach me at
         <a href="mailto:katerina@cawomenslist.org">katerina@cawomenslist.org</a>.
       </p>
@@ -56,3 +58,67 @@
           PoliticalDonorIQ
         </a>
         <em>(Non-Commercial Personal Project)</em>
+      </h3>
+      <p>
+        <strong>PoliticalDonorIQ</strong> is a personal side project created for non-commercial learning and experimentation.
+        It explores ways to make federal campaign finance data more accessible, with optional AI-assisted profiling
+        to generate clean, structured insights.
+      </p>
+      <p class="project-meta">
+        <strong>Status:</strong> Invite-only beta (friends &amp; family testing)<br>
+        <strong>Role:</strong> Designer / Developer / Product Architect<br>
+        <strong>Stack:</strong> React, Deno, FEC API<br>
+        <strong>Site:</strong>
+        <a href="https://app.politicaldonoriq.com" target="_blank" rel="noopener noreferrer">
+          politicaldonoriq.com
+        </a><br>
+        <strong>Contact:</strong>
+        <a href="mailto:info@politicaldonoriq.com">info@politicaldonoriq.com</a>
+      </p>
+    </section>
+
+    <section>
+      <h3>How I Recharge</h3>
+      <p>
+        <strong>
+          <a href="https://www.goodreads.com/user/show/56735501-katerina-ioannides" target="_blank" rel="noopener noreferrer">
+            Reading:
+          </a>
+        </strong>
+        I read 52–100 books a year and share highlights on Goodreads. I’ll read anything — send recs.
+      </p>
+      <p>
+        <strong>
+          <a href="https://www.strava.com/athletes/84096303" target="_blank" rel="noopener noreferrer">
+            Running &amp; Movement:
+          </a>
+        </strong>
+        Running keeps me grounded — it’s where I find connection, clarity, and stay connected to my neighbors.
+        I’ve worked with brands like AHA Sparkling Water, LMNT, and CBS Radford to support local run clubs and creators across LA.
+      </p>
+    </section>
+
+    <footer class="site-foot">
+      site by kat.
+    </footer>
+  </main>
+
+  <script>
+    (function setActiveNav(){
+      const path = location.pathname.split('/').pop() || 'index.html';
+      const hash = location.hash.replace('#','');
+
+      document.querySelectorAll('nav.site-nav a').forEach(a=>{
+        const route = a.dataset.route;
+        const isActive =
+          (route === 'projects' && path === 'projects.html') ||
+          (route === 'speaking' && path === 'speaking.html') ||
+          (route === 'bio' && hash === 'bio') ||
+          (route === 'resume' && hash === 'resume');
+
+        if (isActive) a.classList.add('is-active');
+      });
+    })();
+  </script>
+</body>
+</html>
