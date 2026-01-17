@@ -74,19 +74,28 @@
     </footer>
   </main>
 
-  <!-- Shared nav active-state helper (same snippet as index) -->
+    <footer class="site-foot">
+      site by kat.
+    </footer>
+  </main>
+
   <script>
     (function setActiveNav(){
-      const path = (location.hash || '').replace('#','') || (location.pathname.split('/').pop() || 'projects.html');
+      const path = location.pathname.split('/').pop() || 'index.html';
+      const hash = location.hash.replace('#','');
+
       document.querySelectorAll('nav.site-nav a').forEach(a=>{
         const route = a.dataset.route;
         const isActive =
-          (route === 'projects' && location.pathname.endsWith('projects.html')) ||
-          (route === 'bio' && path === 'bio') ||
-          (route === 'resume' && path === 'resume');
+          (route === 'projects' && path === 'projects.html') ||
+          (route === 'speaking' && path === 'speaking.html') ||
+          (route === 'bio' && hash === 'bio') ||
+          (route === 'resume' && hash === 'resume');
+
         if (isActive) a.classList.add('is-active');
       });
     })();
   </script>
 </body>
 </html>
+
