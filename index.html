@@ -2,91 +2,128 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Katerina Ioannides — Political Strategist & Fundraiser</title>
+  <meta name="description" content="Katerina Ioannides — political strategist & fundraiser working at the intersection of tech and politics." />
+  <meta name="author" content="Katerina Ioannides" />
+  <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#ffffff" />
-  <meta property="og:title" content="katerina ioannides" />
+  <link rel="canonical" href="https://katerinaioannides.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Katerina Ioannides" />
   <meta property="og:type" content="website" />
-  <meta name="author" content="Katerina Ioannides">
-  <meta name="robots" content="index, follow">
-  <meta name="description" content="Katerina Ioannides — political strategist & fundraiser working at the intersection of tech and politics.">
-  <meta property="og:description" content="Digital strategy meets campaign execution.">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Katerina Ioannides">
-  <meta name="twitter:description" content="Political strategist and fundraiser.">
-  <link rel="canonical" href="https://katerinaioannides.com/">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐈‍⬛</text></svg>">
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta property="og:description" content="Digital strategy meets campaign execution." />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Katerina Ioannides" />
+  <meta name="twitter:description" content="Political strategist and fundraiser." />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🐈‍⬛</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet" />
+
+  <!-- Keep if you already have global styles -->
+  <link rel="stylesheet" href="style.css" />
+
   <style>
+    :root {
+      --text: #111;
+      --muted: #555;
+      --border: #ddd;
+      --link: #0057b8;
+      --max: 720px;
+    }
+
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
-      font-family: 'EB Garamond', Georgia, serif;
+      font-family: "EB Garamond", Georgia, serif;
       background: #fff;
-      color: #111;
+      color: var(--text);
       line-height: 1.7;
     }
 
     main {
-      max-width: 720px;
+      max-width: var(--max);
       margin: 0 auto;
-      padding: 60px 30px;
+      padding: 60px 24px;
       text-align: left;
+    }
+
+    header {
+      margin-bottom: 1.75rem;
     }
 
     h1 {
       text-transform: lowercase;
-      font-weight: normal;
+      font-weight: 400;
       font-size: clamp(2rem, 5vw, 2.5rem);
-      margin-bottom: 0.5rem;
+      margin: 0 0 0.35rem;
     }
 
-    h2 {
-      font-weight: normal;
+    .tagline {
+      margin: 0 0 1rem;
+      color: var(--muted);
+      font-weight: 400;
       font-size: clamp(1rem, 2.5vw, 1.2rem);
-      margin: 0 0 30px;
-      color: #444;
+    }
+
+    .contact {
+      margin: 0 0 1.5rem;
     }
 
     nav {
-      margin: 2rem 0;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid #ddd;
+      margin: 1.5rem 0 2rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
       text-transform: uppercase;
       font-size: 0.9rem;
       letter-spacing: 0.5px;
-    }
-
-    nav a {
-      margin-right: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 16px;
     }
 
     a {
-      color: #0057b8;
+      color: var(--link);
       text-decoration: none;
       border-bottom: 1px dotted transparent;
       transition: border-color 0.2s ease;
     }
 
-    a:hover {
-      border-bottom-color: currentColor;
+    a:hover { border-bottom-color: currentColor; }
+
+    section { margin: 0 0 2.5rem; }
+
+    section h2 {
+      margin: 0 0 0.75rem;
+      font-weight: 400;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      color: var(--muted);
     }
 
     .bio p {
-      margin-bottom: 1.5rem;
+      margin: 0 0 1.5rem;
     }
 
     footer {
       text-align: center;
       font-size: 0.9rem;
       color: #888;
-      margin-top: 4rem;
-      padding: 20px 0;
+      margin-top: 3rem;
+      padding: 20px 0 0;
+      border-top: 1px solid var(--border);
     }
 
-    #resume-section {
-      display: none;
-    }
+    /* Resume lock styles kept (content hidden by default), but resume is removed from nav. */
+    #resume-section { display: none; }
 
     #locked-message {
       display: none;
@@ -119,41 +156,49 @@
     }
   </style>
 </head>
+
 <body>
   <main>
-    <h1>katerina ioannides</h1>
-    <h2>tech. fundraising. political strategy.</h2>
+    <header>
+      <h1>katerina ioannides</h1>
+      <p class="tagline">tech. fundraising. political strategy.</p>
 
- <p><a id="email-link" href="mailto:kat@katerinaioannides.com">email kat</a></p>
+      <p class="contact"><a id="email-link" href="mailto:kat@katerinaioannides.com">email kat</a></p>
 
-   <nav>
-  <a href="#bio">bio</a>
-  <a href="projects.html">projects</a>
-  <a href="speaking.html">speaking</a>
-  <a href="#resume">resume</a>
-</nav>
+      <nav aria-label="Primary">
+        <a href="index.html#bio" aria-current="page">bio</a>
+        <a href="projects.html">projects</a>
+        <a href="speaking.html">speaking</a>
+      </nav>
+    </header>
 
-    <section class="bio" id="bio">
+    <section class="bio" id="bio" aria-labelledby="bio-heading">
+      <h2 id="bio-heading" class="visually-hidden" style="position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;">
+        Bio
+      </h2>
+
       <p><strong>Katerina (Kat) Ioannides</strong> is a political strategist and fundraiser with a decade of experience at the intersection of politics and technology. She currently works at <a href="https://www.ngpvan.com/" target="_blank" rel="noopener noreferrer">the leading technology provider</a> for Democratic campaigns and nonprofits, and serves as Finance Director for <a href="https://www.californiawomenslist.org/" target="_blank" rel="noopener noreferrer">California Women’s List</a>.</p>
-      <p>Previously, Kat served as Deputy Director of Western U.S. Finance for the Harris-Walz presidential campaign, where she helped execute 63 fundraisers across nine states, raising $143 million and contributing to a record-breaking $2 billion fundraising operation. She also spent three years at <a href="https://www.actblue.com/" target="_blank" rel="noopener noreferrer">ActBlue</a>, managing Western accounts and scaling digital fundraising for hundreds of campaigns and progressive organizations. While there, she launched the platform’s first statewide partnership with the California Democratic Party, designed and led a campaign finance bootcamp that trained more than 250 candidates and staff, and drove record market growth in some of the country’s most complex compliance environments through product-first, systems-level solutions. </p>
+
+      <p>Previously, Kat served as Deputy Director of Western U.S. Finance for the Harris-Walz presidential campaign, where she helped execute 63 fundraisers across nine states, raising $143 million and contributing to a record-breaking $2 billion fundraising operation. She also spent three years at <a href="https://www.actblue.com/" target="_blank" rel="noopener noreferrer">ActBlue</a>, managing Western accounts and scaling digital fundraising for hundreds of campaigns and progressive organizations. While there, she launched the platform’s first statewide partnership with the California Democratic Party, designed and led a campaign finance bootcamp that trained more than 250 candidates and staff, and drove record market growth in some of the country’s most complex compliance environments through product-first, systems-level solutions.</p>
+
       <p>Earlier in her career, Kat managed a historic assembly race that flipped a Republican district by five points and outraised an incumbent 4:1. She later served as Organizing Director for Elizabeth Warren’s presidential campaign in Los Angeles and Orange County. She's also consulted for state caucuses and national organizations, including Flip The West, the Wisconsin Assembly Democrats, and the Utah House Democrats, and previously worked in both chambers of the California Legislature. Before transitioning into politics, she worked in early-stage tech start-ups.</p>
+
       <p>Kat lives in Los Angeles, and enjoys <a href="https://www.goodreads.com/user/show/56735501-katerina-ioannides" target="_blank" rel="noopener noreferrer">reading</a> and <a href="https://www.strava.com/athletes/84096303" target="_blank" rel="noopener noreferrer">running.</a></p>
     </section>
 
+    <!-- Resume section preserved (hidden unless #resume), but resume is removed from nav. -->
     <section id="resume-section">
       <div id="locked-message">Ping Kat for access — or guess 🗝️</div>
       <div id="locked-footer"><a href="index.html">← Back to home</a></div>
       <div id="resume-content">
-        <section id="resume">
-          <h2>Resume</h2>
+        <section id="resume" aria-labelledby="resume-heading">
+          <h2 id="resume-heading">Resume</h2>
           <p>coming soon</p>
         </section>
       </div>
     </section>
 
-    <footer>
-      site by kat.
-    </footer>
+    <footer>site by kat.</footer>
   </main>
 
   <script>
@@ -175,6 +220,7 @@
       const isResume = window.location.hash === "#resume";
       document.getElementById("resume-section").style.display = isResume ? "block" : "none";
       document.getElementById("bio").style.display = isResume ? "none" : "block";
+
       if (isResume) {
         document.getElementById("locked-message").style.display = "flex";
         document.getElementById("locked-footer").style.display = "block";
