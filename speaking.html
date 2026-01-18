@@ -26,7 +26,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet" />
 
-  <!-- If you already have global styles, keep this. -->
   <link rel="stylesheet" href="style.css" />
 
   <style>
@@ -109,9 +108,11 @@
       color: var(--muted);
     }
 
+    /* 👇 This keeps the line from breaking */
     .section-subhead {
       margin: 0 0 1.75rem;
       color: var(--muted);
+      white-space: nowrap;
     }
 
     ul.list {
@@ -121,10 +122,6 @@
 
     ul.list li {
       margin: 0.4rem 0;
-    }
-
-    .meta {
-      color: var(--muted);
     }
 
     footer {
@@ -146,11 +143,11 @@
 
       <p class="contact"><a href="mailto:kat@katerinaioannides.com">email kat</a></p>
 
+      <!-- Resume intentionally removed -->
       <nav aria-label="Primary">
         <a href="index.html#bio">bio</a>
         <a href="projects.html">projects</a>
         <a href="speaking.html" aria-current="page">speaking</a>
-        <a href="index.html#resume">resume</a>
       </nav>
 
       <p class="section-subhead">
@@ -174,7 +171,7 @@
         <li><strong>Fullerton College Annual Women’s Forum</strong> — Keynote Speaker</li>
         <li><strong>California Democratic Party Convention</strong> — Tech Panel Moderator</li>
         <li><strong>California Democratic Party Convention</strong> — Campaign Bootcamp: Fundraising</li>
-        <li><strong>Democratic National Committee</strong> — Technology Showcase </li>
+        <li><strong>Democratic National Committee</strong> — Technology Showcase</li>
         <li><strong>Democratic Legislative Campaign Committee (DLCC)</strong> — Finance Training</li>
         <li><strong>Emily’s List</strong> — Fundraising Training</li>
         <li><strong>California Women’s List</strong> — Fundraising Training</li>
